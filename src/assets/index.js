@@ -30,6 +30,14 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import wade from "./wade.jpeg";
+import nick from "./nick.jpeg";
+import summerofcode from "./summerofcode.png";
+import peppercornlabs from "./peppercornlabs.jpeg";
+import cakesoft from "./cakesoft.png";
+import zebrista from "./zebrista.png";
+import arpit from "./arpit.jpeg";
+
 export {
   logo,
   backend,
@@ -59,4 +67,11 @@ export {
   carrent,
   jobit,
   tripguide,
+  wade,
+  nick,
+  summerofcode,
+  peppercornlabs,
+  cakesoft,
+  zebrista,
+  arpit,
 };

@@ -12,8 +12,8 @@ import { slideIn } from "../utils/motion";
 const Contact = () => {
   const formRef = useRef();
   const [formState, setFormState] = useState({
-    name: "",
-    email: "",
+    from_name: "",
+    from_email: "",
     message: "",
   });
 
@@ -23,7 +23,32 @@ const Contact = () => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => { };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs
+      .sendForm(
+        "service_9iujgfe",
+        "template_0objobq",
+        formRef.current,
+        "BURNzmYHYIgI6CZ3o"
+      )
+      .then(
+        (result) => {
+          setLoading(false);
+          setFormState({
+            from_name: "",
+            from_email: "",
+            message: "",
+          });
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          setLoading(false);
+          alert(error.text);
+        }
+      );
+  };
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
@@ -43,7 +68,7 @@ const Contact = () => {
             <span className="text-secondary text-[12px]">Name</span>
             <input
               type="text"
-              name="name"
+              name="from_name"
               value={formState.name}
               onChange={handleChange}
               placeholder="What's your name?"
@@ -54,7 +79,7 @@ const Contact = () => {
             <span className="text-secondary text-[12px]">Your Email</span>
             <input
               type="email"
-              name="email"
+              name="from_email"
               value={formState.email}
               onChange={handleChange}
               placeholder="What's your email?"

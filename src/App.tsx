@@ -5,7 +5,6 @@ import {
   About,
   Experience,
   Tech,
-  Works,
   Feedbacks,
   Contact,
   StarsCanvas,
@@ -14,7 +13,7 @@ import {
 function App() {
   return (
     <HashRouter>
-      <div className="relative z-0 bg-primary">
+      <div className="relative z-0 bg-primary pb-20">
         <div className="bg-hero-pattern bg-cover bg-center">
           <Navbar />
           <Hero />
@@ -22,7 +21,6 @@ function App() {
         <About />
         <Experience />
         <Tech />
-        <Works />
         <Feedbacks />
         <div className="relative z-0">
           <Contact />

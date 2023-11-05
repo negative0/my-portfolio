@@ -23,7 +23,7 @@ const ExperienceCard = ({ experience }) => {
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className="w-[60%] h-[60%] object-contain"
+            className="w-[75%] h-[75%] object-contain rounded-full"
           />
         </div>
       }
@@ -40,11 +40,19 @@ const ExperienceCard = ({ experience }) => {
             key={`experince-point-${index}`}
             className="text-white-100 text-[14px] pl-1 tracking-wider"
           >
-            {" "}
             {point}
           </li>
         ))}
       </ul>
+      <div className="flex flex-row gap-2 justify-end mt-2">
+        {experience?.links?.map(({ link, icon, name }) => (
+          <div className="black-gradient rounded-2xl">
+            <a href={link} target="_blank" rel="noreferrer">
+              <img src={icon} alt={name} className="w-8 h-8 object-contain" />
+            </a>
+          </div>
+        ))}
+      </div>
     </VerticalTimelineElement>
   );
 };
@@ -52,7 +60,7 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} className="mt-20">
         <p className={styles.sectionSubText}>What I have done so far</p>
         <h2 className={styles.sectionHeadText}>Work Experience.</h2>
       </motion.div>
