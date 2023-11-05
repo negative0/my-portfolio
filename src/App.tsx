@@ -1,34 +1,35 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { HashRouter } from "react-router-dom";
+import {
+  Navbar,
+  Hero,
+  About,
+  Experience,
+  Tech,
+  Works,
+  Feedbacks,
+  Contact,
+  StarsCanvas,
+} from "./components";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <HashRouter>
+      <div className="relative z-0 bg-primary">
+        <div className="bg-hero-pattern bg-cover bg-center">
+          <Navbar />
+          <Hero />
+        </div>
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <Feedbacks />
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          Hello is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </HashRouter>
   );
 }
 
