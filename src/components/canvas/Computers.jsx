@@ -1,28 +1,20 @@
-import React, { Suspense, useState, useEffect } from "react";
+import React, { Suspense, useState, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+const Computers = ({ isMobile, mouse, windowWidth }) => {
+  const computer = useGLTF("./minecraft_skin/scene.gltf");
   return (
     <mesh>
-      <ambientLight />
-      <hemisphereLight intensity={0.15} groundColor="black" />
-      <pointLight intensity={1.5} />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={2}
-        castShadow
-        shadow-mapSize-width={1024}
-      />
+      <ambientLight color={"#915eff"} intensity={0.5} />
+      <hemisphereLight intensity={2.5} groundColor="#915eff" />
+      <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.25] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={0.025}
+        position={[0, -3.5, -3.25]}
+        rotation={[0, (-1 * (windowWidth / 2 - mouse.x)) / 1500, 0]}
       />
     </mesh>
   );
@@ -30,6 +22,8 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
     setIsMobile(mediaQuery.matches);
@@ -41,12 +35,40 @@ const ComputersCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
+
+  // useEffect on moving the mouse
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const { clientX, clientY } = e;
+      setMouse({ x: clientX, y: clientY });
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  // useEffect for window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Canvas
       frameloop="demand"
       shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{
+        position: [0, 0, 20],
+        fov: 25,
+        near: 0.1,
+        far: 200,
+      }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
@@ -55,7 +77,11 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Computers
+          isMobile={isMobile}
+          mouse={mouse}
+          windowWidth={windowWidth}
+        />
         <Preload all />
       </Suspense>
     </Canvas>
