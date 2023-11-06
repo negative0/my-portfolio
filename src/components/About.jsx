@@ -49,7 +49,7 @@ const About = () => {
         end to end including but not limited to frontend, backend, and
         deployment.
       </motion.p>
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap gap-10 justify-evenly">
         {services.map((service, index) => (
           <ServiceCard key={index} index={index} service={service} />
         ))}
