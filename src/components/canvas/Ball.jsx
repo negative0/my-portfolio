@@ -10,18 +10,6 @@ import {
 
 import CanvasLoader from "../Loader";
 
-const BallCanvas = ({ icon }) => {
-  return (
-    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
-        <Preload all />
-      </Suspense>
-    </Canvas>
-  );
-};
-
 const Ball = ({ imgUrl }) => {
   const [decal] = useTexture([imgUrl]);
   return (
@@ -45,5 +33,19 @@ const Ball = ({ imgUrl }) => {
     </Float>
   );
 };
+
+const BallCanvas = ({ icon }) => {
+  return (
+    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls enableZoom={false} />
+        <Ball imgUrl={icon} />
+        <Preload all />
+      </Suspense>
+    </Canvas>
+  );
+};
+
+
 
 export default BallCanvas;
