@@ -38,6 +38,15 @@ import cakesoft from "./cakesoft.png";
 import zebrista from "./zebrista.png";
 import arpit from "./arpit.jpeg";
 
+import mysql from "./mysql.webp";
+
+import kubernetes from "./kubernetes.png";
+import aws from "./aws.png";
+import digitalocean from "./digitalocean.png";
+import helm from "./helm.svg";
+import neovim from "./neovim.png";
+import firebase from "./firebase.png";
+
 export {
   logo,
   backend,
@@ -74,4 +83,11 @@ export {
   cakesoft,
   zebrista,
   arpit,
+  mysql,
+  kubernetes,
+  aws,
+  digitalocean,
+  helm,
+  neovim,
+  firebase,
 };

@@ -11,6 +11,12 @@ import { textVariant } from "../utils/motion";
 
 import "react-vertical-timeline-component/style.min.css";
 
+const colors = [
+  "blue-text-gradient",
+  "green-text-gradient",
+  "pink-text-gradient",
+];
+
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
@@ -54,6 +60,18 @@ const ExperienceCard = ({ experience }) => {
               <img src={icon} alt={name} className="w-8 h-8 object-contain" />
             </a>
           </div>
+        ))}
+      </div>
+      <div className="mt-4 flex flex-wrap gap-2">
+        {experience?.skills?.map((tag, index) => (
+          <p
+            className={`${
+              colors[index % colors.length]
+            } px-2 py-1 rounded-sm text-[14px]`}
+            key={tag}
+          >
+            #{tag}
+          </p>
         ))}
       </div>
     </VerticalTimelineElement>
