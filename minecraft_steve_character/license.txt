@@ -1,0 +1,11 @@
+Model Information:
+* title:	Minecraft Steve Character
+* source:	https://sketchfab.com/3d-models/minecraft-steve-character-bc3a691e63054c3ea316962ffbb35105
+* author:	nigam (https://sketchfab.com/nigamxcreations)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Minecraft Steve Character" (https://sketchfab.com/3d-models/minecraft-steve-character-bc3a691e63054c3ea316962ffbb35105) by nigam (https://sketchfab.com/nigamxcreations) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
