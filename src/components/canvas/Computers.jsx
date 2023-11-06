@@ -53,6 +53,9 @@ const ComputersCanvas = () => {
   useEffect(() => {
     const handleMouseMove = (e) => {
       const { clientX, clientY } = e;
+      // debounce
+      if (Math.abs(mouse.x - clientX) < 5 && Math.abs(mouse.y - clientY) < 5)
+        return;
       setMouse({ x: clientX, y: clientY });
     };
     window.addEventListener("mousemove", handleMouseMove);
