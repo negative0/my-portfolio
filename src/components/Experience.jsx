@@ -37,7 +37,7 @@ const ExperienceCard = ({ experience }) => {
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
           <li
-            key={`experince-point-${index}`}
+            key={`experience-point-${index}`}
             className="text-white-100 text-[14px] pl-1 tracking-wider"
           >
             {point}
@@ -46,7 +46,10 @@ const ExperienceCard = ({ experience }) => {
       </ul>
       <div className="flex flex-row gap-2 justify-end mt-2">
         {experience?.links?.map(({ link, icon, name }) => (
-          <div className="black-gradient rounded-2xl">
+          <div
+            className="black-gradient rounded-2xl"
+            key={`experience-point-${name}`}
+          >
             <a href={link} target="_blank" rel="noreferrer">
               <img src={icon} alt={name} className="w-8 h-8 object-contain" />
             </a>
@@ -60,7 +63,7 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()} className="mt-20">
+      <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>What I have done so far</p>
         <h2 className={styles.sectionHeadText}>Work Experience.</h2>
       </motion.div>

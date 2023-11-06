@@ -1,19 +1,32 @@
 import React, { Suspense, useState, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { OrbitControls, Preload, useGLTF, useHelper } from "@react-three/drei";
 import CanvasLoader from "../Loader";
+import * as THREE from "three";
+
+const useHelpers = false;
 
 const Computers = ({ isMobile, mouse, windowWidth }) => {
-  const computer = useGLTF("./minecraft_skin/scene.gltf");
+  const computer = useGLTF("./minecraft_steve_character/scene.gltf");
+  const spotLightRef = useRef();
+  useHelper(useHelpers && spotLightRef, THREE.SpotLightHelper);
   return (
     <mesh>
-      <ambientLight color={"#915eff"} intensity={0.5} />
-      <hemisphereLight intensity={2.5} groundColor="#915eff" />
+      <ambientLight intensity={0.5} />
+      <hemisphereLight intensity={2.5} groundColor="#2A0E46" />
       <pointLight intensity={1} />
+      <spotLight
+        intensity={10}
+        ref={spotLightRef}
+        position={[1, 2, 2]}
+        angle={90}
+        penumbra={1}
+        castShadow
+      />
       <primitive
         object={computer.scene}
-        scale={0.025}
-        position={[0, -3.5, -3.25]}
+        scale={isMobile ? 0.2 : 0.2}
+        position={isMobile ? [0, -4.5, -3.25] : [2, -3.5, -3.25]}
         rotation={[0, (-1 * (windowWidth / 2 - mouse.x)) / 1500, 0]}
       />
     </mesh>
@@ -66,8 +79,8 @@ const ComputersCanvas = () => {
       camera={{
         position: [0, 0, 20],
         fov: 25,
-        near: 0.1,
-        far: 200,
+        near: 1,
+        far: 700,
       }}
       gl={{ preserveDrawingBuffer: true }}
     >
