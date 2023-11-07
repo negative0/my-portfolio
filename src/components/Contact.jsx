@@ -27,10 +27,13 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     emailjs
-      .sendForm(
+      .send(
         "service_9iujgfe",
         "template_0objobq",
-        formRef.current,
+        {
+          ...formState,
+          to_name: "Chaitanya",
+        },
         "BURNzmYHYIgI6CZ3o"
       )
       .then(
@@ -69,7 +72,7 @@ const Contact = () => {
             <input
               type="text"
               name="from_name"
-              value={formState.name}
+              value={formState.from_name}
               onChange={handleChange}
               placeholder="What's your name?"
               className="mt-2 p-4 bg-tertiary rounded-2xl placeholder:secondary outline-none"
@@ -80,7 +83,7 @@ const Contact = () => {
             <input
               type="email"
               name="from_email"
-              value={formState.email}
+              value={formState.from_email}
               onChange={handleChange}
               placeholder="What's your email?"
               className="mt-2 p-4 bg-tertiary rounded-2xl placeholder:secondary outline-none"
