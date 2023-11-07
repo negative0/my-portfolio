@@ -31,6 +31,7 @@ import {
   helm,
   neovim,
   firebase,
+  electron,
 } from "../assets";
 
 export const navLinks = [
@@ -152,6 +153,10 @@ const technologies = [
     title: "Others",
     items: [
       {
+        name: "Electron",
+        icon: electron,
+      },
+      {
         name: "Neo Vim",
         icon: neovim,
       },
@@ -175,14 +180,14 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Apr 2022 - Present",
     points: [
-      "Led the product development of 'SalesJarvis.ai' later rebranded to 'Zebrista'.",
-      "Designed the architecture of the product along with the CTO.",
-      "Built a multi-tenant architecture for the product.",
-      "Built a scalable scraping engine using Puppeteer and deployed using Kubernetes jobs.",
-      "Helped a team of 4 developers to build the product.",
-      "Worked on the agile model to deliver the product on time.",
-      "Interviewed and hired new interns for the team.",
-      "Deployed the project using Kubernetes Helm and Docker on Digital Ocean.",
+      "Led a team of developers for the product development of 'SalesJarvis.ai' later rebranded to 'Zebrista'.",
+      "Designed the framework for the product with a multi-tenant architecture from scratch under the guidance of the CTO.",
+      "Responsible for stakeholder communication, product feature understanding, and implementation.",
+      "Built a scalable scraping engine using Puppeteer from scratch and deployed using Kubernetes Jobs and implemented a job queue on the server.",
+      "Integrated OAuth for Google, Microsoft, Pipedrive, HubSpot, Zoho among others.",
+      "Built a full CD pipeline using GitHub Actions, DockerHub, and Kubernetes with Helm, to deploy dev, staging and production builds",
+      "Worked on silosleuth.com project to enable semantic search and summary generation for siloed data (podcasts) and its libraries using OpenAI’s API, Embeddings and Weaviate.",
+      "Also, interviewed candidates, and hired them for the team.",
     ],
   },
   {
@@ -192,11 +197,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "March 2021 - April 2022",
     points: [
-      "Helped many startups to build their first MVPs using wide range of technologies.",
-      "Developed an electron-react based data transfer application named 'ArtistAnywhere' for ReDesignGroup.",
-      "Used React and Redux to build the UI.",
-      "Integrated a go binary in the electron app to transfer data at a very high speed, and reliably (rclone).",
-      "Developed a PHP based assessment platform 'assesment.cakesofttech.com' to conduct online MCQ rounds for hiring.",
+      "Developed an electron-react based data transfer application named 'ArtistAnywhere' for ReDesignGroup which used Redux for state management and also integrated a go binary (rclone) to transfer data at a high speed reliably.",
+      "Worked on a crypto projects ranking platform CryptoAptitude for investors interested in crypto projects. This project consolidated a lot of information from various sources like LinkedIn, News sites, and University rankings to determine a success probability of a crypto product. Also helped integrate Elastic stack to sync data between MongoDB and the Elastic engine for better query capabilities.",
+      "Developed a PHP based assessment platform (CakeSoft Assess) to conduct online MCQ rounds for hiring.",
     ],
   },
   {
@@ -206,42 +209,23 @@ const experiences = [
     iconBg: "#383E56",
     date: "July 2020 - March 2021",
     points: [
-      "Worked on a crypto wallet mobile app named 'SACWallet' based on Dart and backend on a node server.",
+      "Worked on a crypto wallet mobile app 'SACWallet' based on Flutter which integrated with a Node.js backend.",
+      "Developed a scraping tool using Puppeteer for a client which checked the bank balance of its customers and reported it to a server queue for further processing.",
+      "Made full GitHub repository templates for full stack applications which can be used by the company to quickly kickstart a new project using MERN/ MEAN stack with local, production, and docker build support.",
+      "Created entire CD pipelines to deploy to S3/EC2 for existing projects to enable faster deployment for various client projects.",
     ],
   },
   {
-    title: "React.js Developer Intern",
-    company_name: "Google Summer of Code '2020 - CCExtractor",
-    icon: summerofcode,
-    iconBg: "#E6DEDD",
-    date: "May 2020 - Aug 2020",
-    points: [
-      "This project aims to bring cloud-native functionality to rclone.",
-      "The main motive is to allow a user to do tasks such as document editing and photo editing directly from the GUI without having the restriction of being locked-in to a service like Google Drive.",
-      "Created a platform for other developers to build their own plugins and add them to the rclone webui.",
-    ],
-    links: [
-      {
-        icon: github,
-        name: "GitHub Link",
-        link: "https://github.com/rclone/rclone-webui-react",
-      },
-      {
-        icon: summerofcode,
-        name: "Completion Certificate",
-        link: "https://summerofcode.withgoogle.com/archive/2020/projects/6358944873709568",
-      },
-    ],
-  },
-  {
-    title: "React.js Developer Intern",
-    company_name: "Google Summer of Code '2019 - CCExtractor",
+    title: "React.js Developer",
+    company_name: "Google Summer of Code '2019 '2020 - CCExtractor.org",
     icon: summerofcode,
     iconBg: "#E6DEDD",
     date: "May 2019 - Aug 2019",
     points: [
-      "The project works on providing an all-rounder user interface that touches every aspect of rclone. ",
-      "The goal of this project is to make a streamlined and easy to use interface that provides a non-tech savvy person with the power of rclone and its cloud sync functionalities.",
+      "Built a React-Redux web application for rclone cloud sync tool with testing support and continuous integration using GitHub Actions.",
+      "Created a plugins architecture for the web UI that allowed users to install plugins directly in the browser, utilizing rclone as a filesystem.",
+      "Implemented a plugin for rclone that allows users to mount their cloud storage as a filesystem on their computer.",
+      "Created a platform for other developers to build their own plugins and add them to the rclone web-gui.",
     ],
     links: [
       {
@@ -257,14 +241,14 @@ const experiences = [
     ],
   },
   {
-    title: "Full Stack Java Developer Intern",
+    title: "Full Stack Java Developer",
     company_name: "Peppercorn Labs",
     icon: peppercornlabs,
     iconBg: "#383E56",
     date: "May 2016 - May 2017",
     points: [
-      "Developed a customer-oriented, visual ERP system for a local printing company using Java, SpringBoot, MySQL, Git, and deployed using AWS Lightsail.",
-      "Worked on a application that allows to create and maintain Kanban boards using Java, SpringBoot, MySQL.",
+      "Developed a customer-oriented, visual ERP system for a local printing company using Java, SpringBoot, MySQL, Git, and deployed using AWS Lightsail as an intern.",
+      "Worked on an application that allows to create and maintain Kanban boards using Java, SpringBoot, MySQL.",
       "I was also able to find and mitigate several SQL injection and CORS vulnerabilities in the company's existing applications.",
     ],
   },

@@ -46,6 +46,7 @@ import digitalocean from "./digitalocean.png";
 import helm from "./helm.svg";
 import neovim from "./neovim.png";
 import firebase from "./firebase.png";
+import electron from "./electron.png";
 
 export {
   logo,
@@ -90,4 +91,5 @@ export {
   helm,
   neovim,
   firebase,
+  electron,
 };
