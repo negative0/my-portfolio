@@ -13,9 +13,6 @@ import {
   git,
   figma,
   docker,
-  carrent,
-  jobit,
-  tripguide,
   wade,
   nick,
   github,
@@ -32,6 +29,7 @@ import {
   neovim,
   firebase,
   electron,
+  indexnine,
 } from "../assets";
 
 export const navLinks = [
@@ -174,11 +172,22 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Lead Software Engineer",
+    company_name: "Indexnine Techologies Pvt Ltd",
+    icon: indexnine,
+    iconBg: "#E6DEDD",
+    date: "Dec 2022 - Present",
+    points: [
+      "Worked on a browser automation tool using Electron to enable SSO on various websites for a client.",
+      "Currently working on a new project for a client in the travel domain.",
+    ],
+  },
+  {
     title: "Technical Lead (Zebrista.com)",
     company_name: "CakeSoft Technologies Pvt Ltd",
     icon: zebrista,
     iconBg: "#E6DEDD",
-    date: "Apr 2022 - Present",
+    date: "Apr 2022 - Nov 2023",
     points: [
       "Led a team of developers for the product development of 'SalesJarvis.ai' later rebranded to 'Zebrista'.",
       "Designed the framework for the product with a multi-tenant architecture from scratch under the guidance of the CTO.",
@@ -281,70 +290,4 @@ const testimonials = [
   },
 ];
 
-const projects = [
-  {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
-];
-
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials };

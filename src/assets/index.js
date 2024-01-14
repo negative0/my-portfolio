@@ -48,6 +48,8 @@ import neovim from "./neovim.png";
 import firebase from "./firebase.png";
 import electron from "./electron.png";
 
+import indexnine from "./indexnine.png";
+
 export {
   logo,
   backend,
@@ -92,4 +94,5 @@ export {
   neovim,
   firebase,
   electron,
+  indexnine,
 };
