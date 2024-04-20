@@ -30,6 +30,7 @@ import {
   firebase,
   electron,
   indexnine,
+  sajan
 } from "../assets";
 
 export const navLinks = [
@@ -279,6 +280,18 @@ const testimonials = [
     designation: "Principal Engineer",
     company: "Redesign Group",
     image: wade,
+  },
+  {
+    testimonial: `
+      Chaitanya is a talented Engineer with a strong grasp of programming concepts. 
+      His dedication to his craft and commitment to producing high-quality work are truly commendable. 
+      His problem-solving skills are exceptional, and he has a knack for breaking down complex problems into manageable tasks. 
+      Beyond his technical abilities, Chaitanya is a team player who consistently goes above and beyond to help his colleagues. 
+      His collaborative nature and positive attitude make him a valuable asset to any project or team.`,
+    name: 'Sajan R. Agrawal',
+    designation: 'Co-Founder',
+    company: 'CakeSoft Technologies Pvt Ltd',
+    image: sajan
   },
   {
     testimonial:

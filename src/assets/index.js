@@ -49,6 +49,7 @@ import firebase from "./firebase.png";
 import electron from "./electron.png";
 
 import indexnine from "./indexnine.png";
+import sajan from './sajan.jpeg'
 
 export {
   logo,
@@ -95,4 +96,5 @@ export {
   firebase,
   electron,
   indexnine,
+  sajan
 };
