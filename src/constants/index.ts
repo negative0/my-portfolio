@@ -176,10 +176,10 @@ const experiences = [
     company_name: "Indexnine Techologies Pvt Ltd",
     icon: indexnine,
     iconBg: "#E6DEDD",
-    date: "Dec 2022 - Present",
+    date: "Dec 2023 - Present",
     points: [
       "Worked on a browser automation tool using Electron to enable SSO on various websites for a client.",
-      "Currently working on a new project for a client in the travel domain.",
+      "Currently working on a new product for a client in the Travel Industry.",
     ],
   },
   {
