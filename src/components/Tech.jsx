@@ -42,10 +42,10 @@ const Tech = () => {
             <h3 className="text-[20px] font-bold text-center">
               {section.title}
             </h3>
-            <div className="flex flex-row gap-10 justify-evenly xs:flex-wrap xs:gap-5">
+            <div className="px-2 md:flex md:flex-row md:gap-10 md:justify-evenly">
               {section.items.map((technology, index) => (
                 <div
-                  className="hover:z-10 transition duration-700 ease-in-out"
+                  className="hover:z-10 transition duration-700 ease-in-out my-5"
                   key={technology.name}
                 >
                   <TechCard technology={technology} index={index} />
