@@ -3,14 +3,14 @@ import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
-import { fadeIn, textVariant } from "../utils/motion";
+import { slideIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
 
 const TechCard = ({ technology: { name, icon }, index }) => {
   return (
-    <Tilt className="xs:w-[150px] w-full">
+    <Tilt className="s:w-[150px] w-full">
       <motion.div
-        variants={fadeIn("right", "spring", 0.25 * index, 0.75)}
+        variants={slideIn("right", "spring", 0.25 * index, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card "
       >
         <div
