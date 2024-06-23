@@ -10,8 +10,10 @@ const TechCard = ({ technology: { name, icon }, index }) => {
   return (
     <Tilt className="s:w-[150px] w-full">
       <motion.div
-        variants={slideIn("right", "spring", 0.25 * index, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card "
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5, delay: index * 0.25 }}
+        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card w-[150px]"
       >
         <div
           options={{ max: 45, scale: 1, speed: 450 }}
