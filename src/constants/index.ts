@@ -179,12 +179,11 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Dec 2023 - Present",
     points: [
-      "Leading a team of developers to develop a product for Corporate Airline & Hotel booking for corporate.tripjack.com.",
+      "Leading a team of developers to develop a product used by Corporates to book airline & hotels (corporate.tripjack.com) which has processed over ₹12 lakhs worth of flight and hotel bookings.",
       "Conceived and implemented a multi-tenant modular monolith architecture for the app, featuring asymmetric encryption.",
-      "Spearheaded the development of a electron based single sign-on (SSO) tool, empowering TripJack's support staff to share airline credentials securely and efficiently.",
       "Streamlined API integration by introducing automated code generation using Swagger to the React App which reduced API integration time by around 50%. It generates functions for every API along with TypeScript types. This eliminated the need for frontend developers to manually write and maintain API code, and documentation.",
-      "Took up initiative to build an AI automated code review tool for the Leads in order to empower them to review code faster, catch more bugs and compare the code to relevant ticket in Jira",
-      "The software successfully managed and processed over ₹12 lakhs worth of flight and hotel bookings",
+      "Spearheaded the development of a electron based single sign-on (SSO) tool, empowering TripJack's support staff to share airline credentials securely and efficiently.",
+      "Took up initiative to build an AI automated code review tool for the Leads in order to empower them to review code faster, catch more bugs and compare the code to relevant ticket in Jira (genlabs.in).",
     ],
   },
   {
