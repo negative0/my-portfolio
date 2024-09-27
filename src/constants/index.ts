@@ -30,7 +30,8 @@ import {
   firebase,
   electron,
   indexnine,
-  sajan
+  sajan,
+  gcp // Added GCP icon
 } from "../assets";
 
 export const navLinks = [
@@ -145,6 +146,10 @@ const technologies = [
       {
         name: "Digital Ocean",
         icon: digitalocean,
+      },
+      {
+        name: "GCP", // Added GCP
+        icon: gcp, // Added GCP icon
       },
     ],
   },
