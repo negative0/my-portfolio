@@ -304,6 +304,14 @@ const testimonials = [
     company: "Rclone Services Ltd",
     image: nick,
   },
+  {
+    testimonial:
+      "I highly recommend Chaitanya, an exceptional full stack web development intern who has been working with our team on various projects. During his internship, Chaitanya demonstrated outstanding technical skills and a keen understanding of multiple technologies, including Java, Spring Boot, Bootstrap, jQuery, and MySQL. He was instrumental in the development of several projects, showcasing his versatility and capability to deliver high-quality results under tight deadlines.",
+    name: "Ved Muthal",
+    designation: "CEO and Co-Founder",
+    company: "Peppercorn Labs",
+    image: peppercornlabs,
+  },
 ];
 
 export { services, technologies, experiences, testimonials };
