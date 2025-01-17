@@ -173,6 +173,16 @@ const technologies = [
 
 const experiences = [
   {
+    title: "AI Lead",
+    company_name: "Indexnine Techologies Pvt Ltd",
+    icon: indexnine,
+    iconBg: "#E6DEDD",
+    date: "Dec 2023 - Present",
+    points: [
+      "Working on making Production Grade Agents possible with a focus on LLMs, RAG, and other technologies AI Technologies.",
+    ],
+  },
+  {
     title: "Lead Software Engineer",
     company_name: "Indexnine Techologies Pvt Ltd",
     icon: indexnine,
