@@ -181,7 +181,7 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Dec 2023 - Present",
     points: [
-      "Working on making Production Grade Agents possible with a focus on LLMs, RAG, and other technologies AI Technologies.",
+      "Working on making Production Grade Agents possible with a focus on LLMs, RAG, and other AI Technologies.",
     ],
   },
   {
