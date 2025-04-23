@@ -30,7 +30,9 @@ import {
   firebase,
   electron,
   indexnine,
-  sajan
+  sajan,
+  tauseef,
+  seema,
 } from "../assets";
 
 export const navLinks = [
@@ -278,6 +280,22 @@ const experiences = [
 ];
 
 const testimonials = [
+  {
+    testimonial:
+      "I’ve worked with Chaitanya and found him to be sharp and clear-headed when it comes to solving problems. He doesn't just scratch the surface but dives deep to truly understand the issue and get to the root of it — I’ve never found him clueless about what’s going on beneath.\n\nHe’s straightforward in his approach, honest in his communication, and brings a good balance of thought and calmness to discussions. Beyond his skills, he's genuinely a great person to work with — humble, polite, and always collaborative.\n\nAny team would be lucky to have him.",
+    name: "Tauseef Ahmed Siddiqui",
+    designation: "Principal Product Manager",
+    company: "TripJack",
+    image: tauseef,
+  },
+  {
+    testimonial:
+      "I had the pleasure of working with Chaitanya, and I can confidently say he is one of the most dedicated and talented individuals I have encountered. Chaitanya is incredibly smart, always giving 100% to his work, and demonstrating exceptional problem-solving skills.\n\nWhat stands out most about Chaitanya is his approachable and welcoming attitude toward every team member. If someone on the team is stuck on an issue, Chaitanya is always the go-to person. He has a unique ability to offer fresh perspectives and innovative solutions, making him an invaluable asset to the team.\n\nChaitanya possesses an impressive understanding of the product and consistently shows a deep dedication to his work. He has a clear grasp of client requirements and ensures that they are met with precision. Whenever a critical task with tight deadlines arises, Chaitanya is the first person who comes to mind. His passion for the product and his commitment to excellence are truly inspiring.\n\nI wholeheartedly wish Chaitanya all the best for his future and have no doubt he will continue to achieve great success.",
+    name: "Seema Hande",
+    designation: "Engineering Manager",
+    company: "Indexnine",
+    image: seema,
+  },
   {
     testimonial:
       "Chaitanya is one of the best engineers I have worked with in my 15 years of career in the Pune IT industry. He is very proactive and highly motivated to learn new and emerging tech. He is also a quick learner and possesses an excellent level of IQ. During his last project, he also demonstrated his skills as a good team player and led a team of engineers and interns from Pune's top institutes. I believe he will be an asset to any software engineering team.",

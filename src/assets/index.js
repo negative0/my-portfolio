@@ -50,6 +50,8 @@ import electron from "./electron.png";
 
 import indexnine from "./indexnine.png";
 import sajan from './sajan.jpeg'
+import tauseef from './tauseef.jpeg'
+import seema from './seema.jpeg'
 
 export {
   logo,
@@ -96,5 +98,7 @@ export {
   firebase,
   electron,
   indexnine,
-  sajan
+  sajan,
+  tauseef,
+  seema
 };
