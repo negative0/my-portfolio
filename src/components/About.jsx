@@ -45,8 +45,11 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am a skilled software developer with experience in building products
-        end to end including but not limited to frontend, backend, and
+        I lead teams building AI systems that survive contact with production. I
+        built Uptiq's agent harness from scratch — runtime, skills, knowledge,
+        evaluation — and now lead a team of four training and fine-tuning
+        finance LLMs for agent operation and document AI. Behind that sits a
+        decade of shipping products end to end: frontend, backend, and
         deployment.
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-5 justify-evenly">

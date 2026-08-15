@@ -49,6 +49,7 @@ import firebase from "./firebase.png";
 import electron from "./electron.png";
 
 import indexnine from "./indexnine.png";
+import uptiq from "./uptiq.svg";
 import sajan from './sajan.jpeg'
 import tauseef from './tauseef.jpeg'
 import seema from './seema.jpeg'
@@ -98,6 +99,7 @@ export {
   firebase,
   electron,
   indexnine,
+  uptiq,
   sajan,
   tauseef,
   seema

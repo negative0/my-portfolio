@@ -4,6 +4,7 @@ import {
   Hero,
   About,
   Experience,
+  Projects,
   Feedbacks,
   Contact,
   StarsCanvas,
@@ -21,6 +22,7 @@ function App() {
         <About />
         <Feedbacks />
         <Experience />
+        <Projects />
         <Tech />
         <div className="relative z-0">
           <Contact />
