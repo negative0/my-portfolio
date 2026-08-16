@@ -4,6 +4,7 @@ import Tilt from "react-parallax-tilt";
 import { styles } from "../styles";
 import { projects } from "../constants";
 import { SectionWrapper } from "../hoc";
+import Markdown from "./Markdown";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const tagColors = [
@@ -29,9 +30,9 @@ const ProjectCard = ({ index, name, category, description, tags, links }) => {
           </p>
         </div>
 
-        <p className="mt-3 text-secondary text-[14px] leading-[22px] flex-1">
-          {description}
-        </p>
+        <div className="mt-3 text-secondary text-[14px] leading-[22px] flex-1">
+          <Markdown inline>{description}</Markdown>
+        </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
           {tags?.map((tag, tagIndex) => (

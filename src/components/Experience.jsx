@@ -6,6 +6,7 @@ import {
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { experiences } from "../constants";
+import Markdown from "./Markdown";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
@@ -54,7 +55,7 @@ const ExperienceCard = ({ experience }) => {
             key={`experience-point-${index}`}
             className="text-white-100 text-[14px] pl-1 tracking-wider"
           >
-            {point}
+            <Markdown inline>{point}</Markdown>
           </li>
         ))}
       </ul>
