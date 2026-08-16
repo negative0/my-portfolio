@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -17,7 +17,15 @@ const colors = [
   "pink-text-gradient",
 ];
 
+const VISIBLE_POINTS = 3;
+
 const ExperienceCard = ({ experience }) => {
+  const [expanded, setExpanded] = useState(false);
+  const points = experience.points ?? [];
+  const isTruncated = points.length > VISIBLE_POINTS;
+  const visiblePoints =
+    isTruncated && !expanded ? points.slice(0, VISIBLE_POINTS) : points;
+
   return (
     <VerticalTimelineElement
       contentStyle={{ background: "#1d1836", color: "#fff" }}
@@ -41,7 +49,7 @@ const ExperienceCard = ({ experience }) => {
         </p>
       </div>
       <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
+        {visiblePoints.map((point, index) => (
           <li
             key={`experience-point-${index}`}
             className="text-white-100 text-[14px] pl-1 tracking-wider"
@@ -50,6 +58,16 @@ const ExperienceCard = ({ experience }) => {
           </li>
         ))}
       </ul>
+
+      {isTruncated && (
+        <button
+          type="button"
+          onClick={() => setExpanded((prev) => !prev)}
+          className="mt-3 text-secondary hover:text-white text-[14px] font-medium underline underline-offset-4 transition-colors"
+        >
+          {expanded ? "Read less" : "Read more"}
+        </button>
+      )}
       <div className="flex flex-row gap-2 justify-end mt-2">
         {experience?.links?.map(({ link, icon, name }) => (
           <div
