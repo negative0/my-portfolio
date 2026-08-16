@@ -326,81 +326,18 @@ const projects = [
     ],
   },
   {
-    name: "SLMTeam",
-    category: "Open Source",
-    description:
-      "An agent fleet that keeps an open-source repo alive while you hold down a day job — scanning for vulnerabilities, triaging issues, drafting features and reviewing community PRs. Runs locally, opens PRs but never merges, and routes each task to the cheapest model that can do it: Claude for architecture, DeepSeek for triage, local Ollama for mechanical work, with a different model always judging the code another one wrote.",
-    tags: ["Multi-Agent", "Claude Code", "Ollama", "OpenRouter"],
-  },
-  {
-    name: "EV Station Map",
-    category: "Product",
-    description:
-      "A siting tool for EV charging infrastructure. Overlays charger networks against dark-store locations across Pune and answers where a new station would actually earn footfall — coverage gaps, density clustering for chargers sharing a complex, and site-finder scoring. All the geospatial work runs in a Go and PostGIS backend so the React map stays a thin renderer.",
-    tags: ["Go", "PostGIS", "React", "Leaflet"],
-  },
-  {
     name: "WebDeck",
     category: "Product",
     description:
       "A self-hosted Stream Deck for your servers: a customizable button grid that triggers remote commands, scripts and automations, with an AI assistant that turns a plain-English description into the command behind a button. One backend, three clients — browser, Electron desktop, and an Expo mobile app.",
     tags: ["Electron", "Expo", "React", "Self-Hosted"],
-  },
-  {
-    name: "Selective-Attention OCR",
-    category: "Research",
-    description:
-      "Today's OCR scales with what is on the page; a human reads only what they need. This is a small model that takes a natural-language field request over a pile of hundreds of pages and decides which pages to encode at all — triage before perception, rather than the query-after-encoder design every published system uses. Grounded in a survey of 14 papers, borrowing region decoding from GOT-OCR2.0, encoder pruning from HRVDA, and a cascade controller from FrugalGPT.",
-    tags: ["SLM", "OCR", "Vision-Language", "Research"],
-  },
-  {
-    name: "secdata",
-    category: "Research",
-    description:
-      "A data-collection pipeline for training a security-focused small language model. Builds a license-tagged, deduplicated artifact store from CVEs and the open-source commits that fixed them, then derives instruction-tuning tasks from it — kept as artifacts plus generators rather than a frozen dataset, so model size, prompt format and license posture all stay downstream decisions.",
-    tags: ["Python", "Security", "Dataset", "SLM"],
-  },
-  {
-    name: "Domain SLM Fine-Tuning",
-    category: "Research",
-    description:
-      "Fine-tuning Gemma 4 (E2B/E4B) with Unsloth for document classification and extraction on financial paperwork, on a single consumer GPU. Includes a synthetic document generator for the training corpus with controllable rendering quality, GGUF conversion and Ollama packaging for local serving, and an ROI calculator for arguing when a tuned small model beats a frontier API.",
-    tags: ["Unsloth", "Gemma", "LoRA", "GGUF"],
-  },
-  {
-    name: "Agentic Chess",
-    category: "Experiments",
-    description:
-      "Two agents playing chess, each carrying an emotional state that the other can query as a tool — and that drives a virtual face on the board widget. An excuse to explore what agents do when they can read each other's mood.",
-    tags: ["Multi-Agent", "MCP", "Game"],
-  },
-  {
-    name: "Virtual Dev Team",
-    category: "Experiments",
-    description:
-      "Four agents with distinct personas — Dev, QA, BA and CTO — running a software team end to end, from backlog grooming through implementation and review, with the backlog persisted so the team can pick up where it left off.",
-    tags: ["Multi-Agent", "Agents", "SDLC"],
-  },
-  {
-    name: "computer-use-mini",
-    category: "Experiments",
-    description:
-      "A browser-use model small enough to run locally — trading frontier-model breadth for latency and privacy on the narrow task of driving a web page.",
-    tags: ["SLM", "Browser Use", "Local Inference"],
-  },
-  {
-    name: "Robotic LLM",
-    category: "Experiments",
-    description:
-      "Teaching a model to drive an RC car in the open. Starts in a simulated environment the model can explore freely, so the control policy is trained before anything real is at risk.",
-    tags: ["Reinforcement Learning", "Simulation", "Robotics"],
-  },
-  {
-    name: "Portfolio Plus",
-    category: "Experiments",
-    description:
-      "A single portal for a family's finances over India's Account Aggregator protocol (Setu) — stocks, fixed deposits and mutual funds with stock-wise breakdown, each member linking their own accounts.",
-    tags: ["Account Aggregator", "Fintech", "Setu"],
+    links: [
+      {
+        icon: github,
+        name: "GitHub",
+        link: "https://github.com/negative0/webdeck",
+      },
+    ],
   },
 ];
 
