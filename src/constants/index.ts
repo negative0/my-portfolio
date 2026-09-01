@@ -342,6 +342,20 @@ const projects = [
       },
     ],
   },
+  {
+    title: "Software Engineer",
+    company_name: "Google",
+    icon: "src/assets/google.svg",
+    iconBg: "#4285F4",
+    date: "Jan 2024 - Present",
+    points: [
+      "Developing scalable web applications using modern web technologies.",
+      "Collaborating with cross-functional teams to define, design, and ship new features.",
+      "Ensuring the performance, quality, and responsiveness of applications.",
+      "Identifying and correcting bottlenecks and fixing bugs.",
+      "Helping maintain code quality, organization, and automation.",
+    ],
+  },
 ];
 
 const testimonials = [
